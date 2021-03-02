@@ -1,0 +1,20 @@
+//Global configurations (Design scalability implemented with this)
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+//Colors
+
+$primary: #0062E6;
+$secondary: #33AEFF;
+$warning: red;
+$first: #c850c0;
+$second: #4158d0;

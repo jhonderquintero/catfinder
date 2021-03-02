@@ -1,0 +1,207 @@
+.auth__login-body{ //Center login form
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, $primary, $secondary);
+}
+
+.auth__login-wrapper{ // Card 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 520px;
+    width: 95vw;
+    height: 50vh;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 3px 5px 5px 5px rgba(0,0,0,0.4);
+    border-radius: 2px;
+}
+
+.auth__login-header{
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+    justify-content: center;
+    width: 100%;
+    // border: 2px solid orange;
+}
+
+.auth_login-form-group{ //user, password
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    // border: 2px solid purple; 
+}
+
+.auth__login-form_element{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    // border: 1px solid blue;
+}
+
+.pd-5{
+    padding: 2vw;
+}
+
+.icon{
+    height: 100%;
+    width: 100%;
+    font-size: 1.8rem;
+    color: $secondary;
+}
+
+.auth_login-button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    background-color: $primary;
+    border: none;
+    color: white;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 40%;
+    border: 1px solid $primary;
+    display: flex;
+    justify-content: center;
+    
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: white;
+    transition: 0.3s ease;
+    border: 1px solid $secondary;
+    color: $primary;
+}
+
+.button:active{
+    transform: translateY(4px);
+}
+
+.google-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth__login-form_element input{
+    background: none;
+    color: #5e5e5e;
+    font-size: 18px;
+    padding: 6px 6px 6px 4px;
+    width: 100%;
+    border: none;
+    border: 1px solid $secondary;
+    &:focus{
+        border: 1px solid $primary;
+        color: #1e1e1e;
+        box-shadow: 0px 0px 10px 1px rgba(0, 98, 230, 0.4);
+    }
+}
+
+.auth__login-form_element_wrong input{
+    background: none;
+    color: #5e5e5e;
+    font-size: 18px;
+    padding: 6px 6px 6px 4px;
+    width: 30vw;
+    border: none;
+    border: 1px solid red;
+
+    &:focus{
+        border: 1px solid red;
+        color: #1e1e1e;
+        box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 0.5);
+    }
+}
+
+label{
+    color: $primary;
+    font-size: 16px;
+    position: absolute;
+}
+
+.mg-20{
+    margin: 20px;
+}
+
+// Media Queries (responsive)
+
+@media only screen and (min-width: 425px){
+    .auth__login-wrapper{
+        width: 85vw;
+    }
+}
+
+@media only screen and (min-width: 510px){
+    .auth__login-wrapper{
+        width: 80vw;
+    }
+}
+
+@media only screen and (min-width: 560px){
+    .auth__login-wrapper{
+        width: 70vw;
+    }
+}
+
+@media only screen and (min-width: 650px){
+    .auth__login-wrapper{
+        width: 60vw;
+    }
+    .pd-5{
+        padding: 2vw;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .auth__login-wrapper{
+        width: 55vw;
+    }
+    .pd-5{
+        padding: 1vw;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .auth__login-wrapper{
+        width: 40vw;
+    }
+    .pd-5{
+        padding: 1vw;
+    }
+}
+
+@media only screen and (min-width: 1080px){
+    .auth__login-wrapper{
+        width: 35vw;
+    }
+    .pd-5{
+        padding: 1vw;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .auth__login-wrapper{
+        width: 30vw;
+    }
+    .pd-5{
+        padding: 1vw;
+    }
+}
