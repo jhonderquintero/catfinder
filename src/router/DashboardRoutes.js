@@ -20,10 +20,6 @@ export const DashboardRoutes = () => {
             {/* MAIN CONTENT */}
             <main>
                     <Switch>
-                        {/* <Route exact path='/marvel' component={MarvelScreen} />
-                        <Route exact path='/dc' component={DcScreen} />
-                        <Route exact path='/hero/:heroId' component={HeroesScreen} />
-                        <Route exact path='/hero/API/:hero' component={HeroesScreen} /> */}
                         <Route exact path='/search' component={FilterCats} />
                         <Route exact path='/' component={Cats} />
                         <Redirect to='/'/>
