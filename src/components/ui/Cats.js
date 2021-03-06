@@ -2,9 +2,11 @@ import React from 'react'
 
 const Cats = () => {
     return (
-        <div>
-            <h1>All cats</h1>
-        </div>
+        <>
+            <div className='ui__cats-window'>
+                <h1>All cats</h1>
+            </div>
+        </>
     );
 };
 

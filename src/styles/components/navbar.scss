@@ -7,19 +7,16 @@ body { //https://www.svgbackgrounds.com/#pattern-randomized
 
 .ui__navbar_header{
     display: grid;
-    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-columns: 3fr 2fr 1fr;
     gap: 4em;
     padding: 16px 5%;
-    background-color: $primary;
+    background: linear-gradient(to right, $primary, $secondary);
     color: #fff;
     width: 100%;
     min-width: 600px;
 }
 
 .ui_navbar-logo{
-    // background-color: gold;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 6fr;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -46,9 +43,38 @@ body { //https://www.svgbackgrounds.com/#pattern-randomized
 
 .ui__navbar_item-link{
     text-decoration: none;
+}
+
+.ui_navbar-button{
     background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+    text-decoration: none;
+    border: none;
+    color: primary;
+    font-size: 14px;
+    padding: 12px 18px;
+    cursor: pointer;
+}
+// background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(128,233,255,1) 100%, rgba(0,212,255,1) 100%);
+
+.icon{
+    font-size: 1.4rem;
+}
+
+.icon-logo{
+    font-size: 2.2rem;
+}
+
+@media only screen and (max-width: 920px){
+    .ui_navbar-button-text{
+        display: none;
+    }
+
+    .icon{
+        font-size: 1rem;
+    }
+
+    .ui_navbar-button{
+        padding: 10px 16px;
+    }
 }
