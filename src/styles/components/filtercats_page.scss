@@ -1,0 +1,43 @@
+/* Custom Select */
+.ui__cats-select{
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: $primary;
+    overflow: hidden;
+    border-radius: .25em;
+    margin-left: 40px;
+};
+
+select {
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background: #2c3e50;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+};
+
+/* Arrow */
+.ui__cats-select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+};
+
+/* Transition */
+.ui__cats-select:hover::after {
+    color: $secondary;
+};

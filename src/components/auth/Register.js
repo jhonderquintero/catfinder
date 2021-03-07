@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState} from 'react'
 import { faKey, faPaw, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ const initialState = {
 const Register = ({history}) => {
     const [registerModal, setRegisterModal] = useState(false);
     const [registerModal2, setRegisterModal2] = useState(false);
-    const [completeRegisterModal, setCompleteRegisterModal] = useState(false);
+    const [completeRegisterModal] = useState(false);
     
     // Handle Login (Authentications)
     const [formRegisterValues, handleInputRegisterChange] = useForm(initialState);

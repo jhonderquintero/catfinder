@@ -24,17 +24,17 @@ const Login = ({history}) => {
     const [modal2, setModal2] = useState(false);
 
     // HANDLING USER CONTEXT
-    const handleLoginStatus = (name, token='secret_token_google', google='false') =>{
+    const handleLoginStatus = (name, email='user_email', google='false') =>{
         let action = {
             type: types.login,
             payload: {
                 name,
-                token,
+                email,
                 google
             }
         };
         dispatch(action);
-        // history.replace('/');
+        history.replace('/');
     };
 
     // Execute onFailure when sometime failed in google auth 
@@ -52,14 +52,14 @@ const Login = ({history}) => {
                 email,
                 googleId,
             }
-        }
+        };
         const response = await fetchUrl('api/auth/google/login', data).catch(() => {
         console.log(`[LOGIN FAILED]`);
         });
         
         if (typeof response === typeof {}){
-            handleLoginStatus(response.data.user.givenName, response.data.user.token, true);
-            // history.replace('/');
+            handleLoginStatus(response.data.user.givenName, response.data.user.email, true);
+            history.replace('/');
         };
     };
 
@@ -92,7 +92,7 @@ const Login = ({history}) => {
             });
 
             if(typeof response === typeof {}){
-                handleLoginStatus(response.data.user.givenName, response.data.user.token);
+                handleLoginStatus(response.data.user.givenName, response.data.user.email);
                 history.replace('/');
             };
 

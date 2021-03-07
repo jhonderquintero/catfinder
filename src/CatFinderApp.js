@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer } from 'react'
-import { AppRouter } from './router/AppRouter'
-import './styles/index.scss'
-import AuthContext from './auth/AuthContext'
 import { authReducer } from './auth/authReducer';
+import { AppRouter } from './router/AppRouter'
+import AuthContext from './auth/AuthContext'
+import './styles/index.scss'
 
 const init = () => JSON.parse(localStorage.getItem('user')) || { logged: false };
 
@@ -12,7 +12,7 @@ const init = () => JSON.parse(localStorage.getItem('user')) || { logged: false }
 
   // save information about user in local storage
   useEffect(() => {
-    localStorage.setItem( 'user', JSON.stringify(user) );
+    localStorage.setItem( 'user', JSON.stringify(user));
   }, [user])
 
   return (
