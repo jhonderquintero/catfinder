@@ -14,7 +14,7 @@ const validatePasswordModerate = (password) => {
 
 const validateUsername = (username) => {
     //Alphanumeric string that may include _ and – having a length of 3 to 16 characters –
-    const usernameRegex = /^[a-z0-9_-]{3,16}$/
+    const usernameRegex = /^[A-Za-z]{3,16}$/
     if(usernameRegex.test(username)) return true
     else return false;
 };

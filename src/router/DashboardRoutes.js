@@ -9,10 +9,25 @@ import Cats from '../components/ui/Cats';
 import FilterCats from '../components/ui/FilterCats';
 import NavBar from '../components/ui/NavBar';
 import PrivateRoute from './PrivateRoute';
+import { GoogleLogout } from 'react-google-login';
+import { types } from '../types/types';
 
-export const DashboardRoutes = () => {
+const clientId = '890895167918-o17h2hmpatre78rjjd11o0rocf67pk53.apps.googleusercontent.com';
 
-    const {user} = useContext(AuthContext);
+export const DashboardRoutes = ({history}) => {
+
+    const {user, dispatch} = useContext(AuthContext);
+
+    const logout = () =>{
+        let action = {
+            type: types.logout,
+            payload: {
+                logged: false
+            }
+        };
+        dispatch(action);
+        history.push('/login');
+    };
 
     return (
         <div>
@@ -28,6 +43,13 @@ export const DashboardRoutes = () => {
                         <Redirect to='/'/>
                     </Switch>
             </main>
+
+            <GoogleLogout
+            clientId={clientId}
+            buttonText="Logout"
+            onLogoutSuccess={logout}
+            >
+            </GoogleLogout>
 
         </div>
     )
